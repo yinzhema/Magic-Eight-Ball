@@ -40,7 +40,11 @@ class ViewController: UIViewController {
                       "Outlook not so good",
                       "Very doubtful"
         ]
-        resultLabel.text=messages.randomElement()
+        var newMessage=messages.randomElement()!
+        while newMessage == resultLabel.text{
+            newMessage=messages.randomElement()!
+        }
+        resultLabel.text=newMessage
     }
     
 
